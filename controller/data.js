@@ -16,11 +16,11 @@ const getData = async (req,res)=>{
 
 const createConversiones = async (req, res) => {
   const { value1, value2, text1, text2 } = req.body
-  if (!value1 || !value2 || !text1 || !text2) {
-    res.json({
-      message: 'Introduzca un valor válido en todos los campos'
-    })
-  } else {
+  // if (!value1 || !value2 || !text1 || !text2) {
+  //   res.json({
+  //     message: 'Introduzca un valor válido en todos los campos'
+  //   })
+  // } else {
     const newData = new Conversion({
       value1,
       value2,
@@ -38,7 +38,7 @@ const createConversiones = async (req, res) => {
       })
     }
   }
-}
+// }
 
 const deleteData= async (req, res)=>{
   const {_id} = req.body
